@@ -1,18 +1,30 @@
 # Patriot Consulting Website
 
-Single-page site for Patriot Consulting, an operations and growth consultancy serving veteran-owned small businesses and family- and community-centered organizations. Everything lives in one `index.html`; Tailwind CSS and Google Fonts (Libre Caslon) load from CDNs, so there is no build step. Hosted with GitHub Pages from the `main` branch.
+Site for Patriot Consulting, an operations and growth consultancy serving veteran-owned small businesses and family- and community-centered organizations. Tailwind CSS and Google Fonts (Libre Caslon) load from CDNs, so there is no build step. Hosted with GitHub Pages from the `main` branch.
+
+| File                | What it is                                       |
+| ------------------- | ------------------------------------------------ |
+| `index.html`        | The home page                                    |
+| `about.html`        | About the founder: portrait, bio, LinkedIn       |
+| `css/site.css`      | Shared styles for both pages                     |
+| `images/andrew.jpg` | The portrait on the About page                   |
+
+The masthead, menu, and footer are repeated in both pages, so edit both when you change them. On `about.html`, the menu links point to `index.html#section`.
 
 ## Before launch: replace the placeholders
 
-Find and replace these across `index.html`:
+Find and replace these across `index.html` and `about.html`:
 
-| Placeholder       | Replace with                       |
-| ----------------- | ---------------------------------- |
-| `[EMAIL ADDRESS]` | The address inquiries should go to |
-| `[PHONE NUMBER]`  | The office phone number            |
-| `[CITY, STATE]`   | The firm's location                |
+| Placeholder       | Where                       | Replace with                       |
+| ----------------- | --------------------------- | ---------------------------------- |
+| `[EMAIL ADDRESS]` | Both pages                  | The address inquiries should go to |
+| `[PHONE NUMBER]`  | Both pages                  | The office phone number            |
+| `[CITY, STATE]`   | Both footers                | The firm's location                |
+| `[BIO]`           | `about.html`                | A short bio, one `<p>` per paragraph |
 
-Each email and phone placeholder appears in both the link and its text, so one find-and-replace updates both. The firm name is set to "Patriot Consulting"; to change it, find and replace that text as well.
+Each email and phone placeholder appears in both the link and its text, so one find-and-replace updates both. The firm name is set to "Patriot Consulting"; to change it, find and replace that text in both pages as well.
+
+To change the portrait, replace `images/andrew.jpg`. If the file is missing, the About page shows a plain placeholder box instead.
 
 ## Connecting the inquiry form
 

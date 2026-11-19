@@ -29,302 +29,8 @@
       --font-serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
       --font-sans: "Libre Caslon Text", Georgia, "Times New Roman", serif;
     }
-
-    @layer base {
-      html {
-        scroll-behavior: smooth;
-        scroll-padding-top: 1.5rem;
-      }
-      @media (prefers-reduced-motion: reduce) {
-        html { scroll-behavior: auto; }
-      }
-      body {
-        background-color: #E5E2DC;
-        color: #2C353D;
-        font-family: "Libre Caslon Text", Georgia, "Times New Roman", serif;
-        font-size: 1.0625rem;
-        line-height: 1.7;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-      }
-      ::selection { background-color: #1B2A4A; color: #FAF9F6; }
-      :focus-visible { outline: 2px solid #1B2A4A; outline-offset: 3px; }
-      .on-dark :focus-visible { outline-color: #FAF9F6; }
-    }
-
-    @layer components {
-      /* ---------- Masthead ---------- */
-      .masthead-name {
-        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
-        font-size: clamp(2.1rem, 5.4vw, 3.15rem);
-        line-height: 1.12;
-        letter-spacing: 0.09em;
-        text-transform: uppercase;
-        color: #1B2A4A;
-        text-wrap: balance;
-      }
-      .masthead-tagline {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        font-size: 0.72rem;
-        line-height: 1.6;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
-        color: #2C353D;
-      }
-      .masthead-tagline::before,
-      .masthead-tagline::after {
-        content: "";
-        flex: none;
-        width: 2.5rem;
-        height: 1px;
-        background-color: #9A7B3E;
-      }
-      @media (max-width: 639px) {
-        .masthead-tagline::before,
-        .masthead-tagline::after { display: none; }
-      }
-
-      /* Thick-and-thin newspaper rule */
-      .rule-thick-thin {
-        height: 7px;
-        border-top: 3px solid #1B2A4A;
-        border-bottom: 1px solid #1B2A4A;
-      }
-
-      .site-nav { border-bottom: 1px solid #1B2A4A; }
-      .site-nav ul {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        gap: 0.4rem 2.1rem;
-        padding: 0.8rem 1.25rem;
-      }
-      .site-nav a:not(.nav-button) {
-        font-size: 0.78rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #1B2A4A;
-        text-decoration-line: underline;
-        text-decoration-color: transparent;
-        text-decoration-thickness: 1px;
-        text-underline-offset: 0.5em;
-        transition: text-decoration-color 160ms ease;
-      }
-      .site-nav a:not(.nav-button):hover { text-decoration-color: #9A7B3E; }
-      .nav-button {
-        display: inline-block;
-        padding: 0.5rem 0.95rem;
-        font-size: 0.74rem;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #FAF9F6;
-        background-color: #1B2A4A;
-        border: 1px solid #1B2A4A;
-        transition: background-color 160ms ease, color 160ms ease;
-      }
-      .nav-button:hover { color: #1B2A4A; background-color: #FAF9F6; }
-
-      /* ---------- Section furniture ---------- */
-      .dinkus {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        color: #9A7B3E;
-      }
-      .section-title {
-        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
-        font-size: clamp(1.8rem, 3.6vw, 2.4rem);
-        line-height: 1.2;
-        text-align: center;
-        color: #1B2A4A;
-        text-wrap: balance;
-      }
-      .section-intro {
-        max-width: 36rem;
-        margin: 0.85rem auto 0;
-        font-style: italic;
-        text-align: center;
-        color: #5A636B;
-        text-wrap: balance;
-      }
-
-      /* Book-style text: justified with hyphenation on wider screens */
-      .prose-old p { hyphens: auto; -webkit-hyphens: auto; }
-      .prose-old p + p { margin-top: 1rem; }
-      .prose-old.is-indented p + p { margin-top: 0; text-indent: 1.75em; }
-      @media (min-width: 640px) {
-        .prose-old p { text-align: justify; }
-      }
-
-      .dropcap::first-letter {
-        float: left;
-        margin: 0.07em 0.1em 0 0;
-        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
-        font-size: 3.9em;
-        line-height: 0.8;
-        color: #1B2A4A;
-      }
-
-      /* Links inside running text */
-      .text-link {
-        color: #1B2A4A;
-        text-decoration-line: underline;
-        text-decoration-thickness: 1px;
-        text-decoration-color: #B3AB9C;
-        text-underline-offset: 0.2em;
-        transition: text-decoration-color 160ms ease;
-      }
-      .text-link:hover { text-decoration-color: #1B2A4A; }
-
-      /* Classic button: solid navy, inverts on hover */
-      .btn {
-        display: inline-block;
-        padding: 0.9rem 1.6rem;
-        font-size: 0.8rem;
-        font-weight: 700;
-        line-height: 1.5;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        text-align: center;
-        text-wrap: balance;
-        color: #FAF9F6;
-        background-color: #1B2A4A;
-        border: 1px solid #1B2A4A;
-        cursor: pointer;
-        transition: background-color 160ms ease, color 160ms ease;
-      }
-      .btn:hover { color: #1B2A4A; background-color: #FAF9F6; }
-      .btn:disabled { opacity: 0.6; cursor: progress; }
-
-      /* ---------- One Client at a Time frame ---------- */
-      .frame { position: relative; padding: 5px; border: 1px solid #1B2A4A; }
-      .frame-inner { border: 1px solid #1B2A4A; }
-      .frame-star {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 0 0.75rem;
-        color: #9A7B3E;
-        background-color: #FAF9F6;
-      }
-
-      /* ---------- Four pillars: ruled like a printed table ---------- */
-      .pillars { display: grid; }
-      .pillars > article { padding: 1.75rem 0; }
-      .pillars > article + article { border-top: 1px solid #CFC8BB; }
-      @media (min-width: 768px) {
-        .pillars { grid-template-columns: 1fr 1fr; }
-        .pillars > article { padding: 2rem 2.25rem; }
-        .pillars > article + article { border-top: 0; }
-        .pillars > article:nth-child(odd) { padding-left: 0; border-right: 1px solid #CFC8BB; }
-        .pillars > article:nth-child(even) { padding-right: 0; }
-        .pillars > article:nth-child(-n+2) { border-bottom: 1px solid #CFC8BB; }
-      }
-      .pillar-title {
-        font-size: 0.86rem;
-        font-weight: 700;
-        line-height: 1.5;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #1B2A4A;
-      }
-
-      /* ---------- Process: name, dot leader, cost ---------- */
-      .steps > li + li { margin-top: 2.5rem; }
-      .step-head { display: flex; align-items: baseline; }
-      .step-name {
-        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
-        font-size: clamp(1.75rem, 3.4vw, 2.1rem);
-        line-height: 1.1;
-        color: #1B2A4A;
-        white-space: nowrap;
-      }
-      .step-name .numeral { margin-right: 0.08em; color: #9A7B3E; }
-      .leader {
-        flex: 1;
-        min-width: 1.5rem;
-        margin: 0 0.75rem;
-        border-bottom: 2px dotted #B3AB9C;
-        transform: translateY(-0.3em);
-      }
-      .step-cost { font-style: italic; color: #5A636B; white-space: nowrap; }
-
-      /* Boxed notice with its title set into the top border */
-      .notice { position: relative; padding: 2.4rem 1.5rem 1.75rem; border: 1px solid #1B2A4A; }
-      @media (min-width: 640px) { .notice { padding: 2.5rem 2.5rem 2rem; } }
-      .notice-title {
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 0 0.9rem;
-        white-space: nowrap;
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: #1B2A4A;
-        background-color: #FAF9F6;
-      }
-
-      /* ---------- Inquiry form ---------- */
-      .form-row { display: grid; gap: 0.4rem; }
-      .form-row + .form-row { margin-top: 1.25rem; }
-      .form-row > label { line-height: 1.45; color: #1B2A4A; }
-      @media (min-width: 640px) {
-        .form-row { grid-template-columns: 13rem minmax(0, 1fr); gap: 1.25rem; align-items: baseline; }
-        .form-row > label { text-align: right; }
-      }
-      .req { margin-left: 0.15rem; color: #8C2F2F; }
-      .field {
-        display: block;
-        width: 100%;
-        padding: 0.6rem 0.75rem;
-        font-size: 1.0625rem;
-        line-height: 1.5;
-        color: #2C353D;
-        background-color: #FFFFFF;
-        border: 1px solid #8F8A81;
-        border-radius: 0;
-        box-shadow: inset 0 1px 2px rgb(44 53 61 / 0.1);
-      }
-      .field:hover { border-color: #5A636B; }
-      .field:focus { outline: 2px solid #1B2A4A; outline-offset: 0; border-color: #1B2A4A; }
-      .field::placeholder { color: #80868C; font-style: italic; }
-
-      .form-status:not(:empty) {
-        margin-top: 1.5rem;
-        padding: 0.9rem 1.1rem;
-        line-height: 1.6;
-        border: 1px solid #CFC8BB;
-        border-left: 3px solid #9A7B3E;
-        background-color: #FFFFFF;
-      }
-      .form-status[data-tone="error"] { border-left-color: #8C2F2F; }
-
-      /* ---------- Footer ---------- */
-      .footer-name {
-        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
-        font-size: 1.35rem;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-      }
-      .footer-link {
-        color: rgb(250 249 246 / 0.88);
-        text-decoration-line: underline;
-        text-decoration-thickness: 1px;
-        text-decoration-color: transparent;
-        text-underline-offset: 0.25em;
-        transition: color 160ms ease, text-decoration-color 160ms ease;
-      }
-      .footer-link:hover { color: #FAF9F6; text-decoration-color: #9A7B3E; }
-    }
   </style>
+  <link rel="stylesheet" href="css/site.css">
 </head>
 
 <body>
@@ -368,6 +74,7 @@
           <li><a href="#philosophy">Philosophy</a></li>
           <li><a href="#capabilities">Capabilities</a></li>
           <li><a href="#process">Process</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="#inquire">Inquire</a></li>
           <li><a href="#inquire" class="nav-button">Request Free Audit</a></li>
         </ul>
@@ -574,6 +281,8 @@
         <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
         <a href="#process" class="footer-link">Process</a>
         <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
+        <a href="about.html" class="footer-link">About</a>
+        <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
         <a href="#inquire" class="footer-link">Inquire</a>
         <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
         <a href="#top" class="footer-link whitespace-nowrap">Back to Top&nbsp;↑</a>
@@ -602,6 +311,14 @@
 
       /* Footer year */
       document.getElementById('year').textContent = String(new Date().getFullYear());
+
+      /* Smooth scrolling for links within this page, switched on at the first click or
+         key press so links from about.html (index.html#process) land on their section */
+      function enableSmoothScroll() {
+        document.documentElement.classList.add('smooth-scroll');
+      }
+      window.addEventListener('pointerdown', enableSmoothScroll, { once: true });
+      window.addEventListener('keydown', enableSmoothScroll, { once: true });
 
       /* Inquiry form */
       var form = document.getElementById('inquiry-form');
