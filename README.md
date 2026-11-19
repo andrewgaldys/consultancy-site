@@ -1,19 +1,18 @@
-# Consultancy Website
+# Patriot Consulting Website
 
-Single-page site for an operations and growth consultancy serving veteran-owned small businesses and family- and community-centered organizations. Everything lives in one `index.html`; Tailwind CSS and Google Fonts load from CDNs, so there is no build step. Hosted with GitHub Pages from the `main` branch.
+Single-page site for Patriot Consulting, an operations and growth consultancy serving veteran-owned small businesses and family- and community-centered organizations. Everything lives in one `index.html`; Tailwind CSS and Google Fonts (Libre Caslon) load from CDNs, so there is no build step. Hosted with GitHub Pages from the `main` branch.
 
 ## Before launch: replace the placeholders
 
 Find and replace these across `index.html`:
 
-| Placeholder       | Replace with                     |
-| ----------------- | -------------------------------- |
-| `[FIRM NAME]`     | The firm's name                  |
+| Placeholder       | Replace with                       |
+| ----------------- | ---------------------------------- |
 | `[EMAIL ADDRESS]` | The address inquiries should go to |
-| `[PHONE NUMBER]`  | The office phone number          |
-| `[CITY, STATE]`   | The firm's location              |
+| `[PHONE NUMBER]`  | The office phone number            |
+| `[CITY, STATE]`   | The firm's location                |
 
-Each email and phone placeholder appears in both the link and its text, so one find-and-replace updates both.
+Each email and phone placeholder appears in both the link and its text, so one find-and-replace updates both. The firm name is set to "Patriot Consulting"; to change it, find and replace that text as well.
 
 ## Connecting the inquiry form
 

@@ -3,46 +3,47 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>[FIRM NAME] | Operations &amp; Growth Consulting</title>
-  <meta name="description" content="Operations and growth consulting for veteran-owned small businesses and family- and community-centered organizations. One client at a time, with a permanently free operational audit.">
+  <title>Patriot Consulting | Operations &amp; Growth Consulting</title>
+  <meta name="description" content="Patriot Consulting provides operations and growth consulting to veteran-owned small businesses and family- and community-centered organizations. We work with one client at a time, and the operational audit is always free.">
   <meta name="theme-color" content="#1B2A4A">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="[FIRM NAME] | Operations &amp; Growth Consulting, One Business at a Time">
-  <meta property="og:description" content="Dedicated operations and growth consulting for veteran-owned businesses and family-centered organizations. One client at a time, and the operational audit is permanently free.">
+  <meta property="og:title" content="Patriot Consulting | Operations &amp; Growth Consulting, One Business at a Time">
+  <meta property="og:description" content="Operations and growth consulting for veteran-owned businesses and family-centered organizations. One client at a time. The operational audit is always free.">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%231B2A4A'/%3E%3Cpath fill='%23C4A46A' transform='translate(12 12) scale(.7) translate(-12 -12)' d='M12 2.95 14.25 9.86 21.51 9.86 15.63 14.13 17.88 21.04 12 16.77 6.12 21.04 8.37 14.13 2.49 9.86 9.75 9.86Z'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap">
 
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
   <style type="text/tailwindcss">
     @theme {
       --color-navy: #1B2A4A;
-      --color-navy-deep: #121D35;
       --color-ivory: #FAF9F6;
       --color-ink: #2C353D;
       --color-muted: #5A636B;
-      --color-rule: #E5E2DC;
+      --color-stone: #E5E2DC;
+      --color-stone-dark: #CFC8BB;
       --color-brass: #9A7B3E;
-      --font-serif: "Libre Baskerville", Georgia, "Times New Roman", serif;
-      --font-sans: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --font-display: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+      --font-serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
+      --font-sans: "Libre Caslon Text", Georgia, "Times New Roman", serif;
     }
 
     @layer base {
       html {
         scroll-behavior: smooth;
-        scroll-padding-top: 4.75rem;
+        scroll-padding-top: 1.5rem;
       }
       @media (prefers-reduced-motion: reduce) {
         html { scroll-behavior: auto; }
       }
       body {
-        background-color: #FAF9F6;
+        background-color: #E5E2DC;
         color: #2C353D;
-        font-family: "Source Sans 3", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: "Libre Caslon Text", Georgia, "Times New Roman", serif;
         font-size: 1.0625rem;
-        line-height: 1.65;
+        line-height: 1.7;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
       }
@@ -52,599 +53,538 @@
     }
 
     @layer components {
-      /* Small tracked caps label with a brass rule */
-      .eyebrow {
-        display: flex;
-        align-items: center;
-        gap: 0.875rem;
-        font-size: 0.75rem;
-        line-height: 1.5;
-        font-weight: 600;
-        letter-spacing: 0.2em;
+      /* ---------- Masthead ---------- */
+      .masthead-name {
+        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+        font-size: clamp(2.1rem, 5.4vw, 3.15rem);
+        line-height: 1.12;
+        letter-spacing: 0.09em;
         text-transform: uppercase;
         color: #1B2A4A;
+        text-wrap: balance;
       }
-      .eyebrow::before,
-      .eyebrow.is-centered::after {
+      .masthead-tagline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        font-size: 0.72rem;
+        line-height: 1.6;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #2C353D;
+      }
+      .masthead-tagline::before,
+      .masthead-tagline::after {
         content: "";
         flex: none;
-        width: 2rem;
+        width: 2.5rem;
         height: 1px;
         background-color: #9A7B3E;
       }
-      .eyebrow.is-centered { justify-content: center; text-align: center; }
-      .on-dark .eyebrow { color: rgb(250 249 246 / 0.8); }
+      @media (max-width: 639px) {
+        .masthead-tagline::before,
+        .masthead-tagline::after { display: none; }
+      }
 
-      /* Buttons */
-      .btn {
-        display: inline-flex;
+      /* Thick-and-thin newspaper rule */
+      .rule-thick-thin {
+        height: 7px;
+        border-top: 3px solid #1B2A4A;
+        border-bottom: 1px solid #1B2A4A;
+      }
+
+      .site-nav { border-bottom: 1px solid #1B2A4A; }
+      .site-nav ul {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        padding: 0.95rem 1.5rem;
-        font-size: 0.9375rem;
-        line-height: 1.3;
-        font-weight: 600;
-        letter-spacing: 0.015em;
+        gap: 0.4rem 2.1rem;
+        padding: 0.8rem 1.25rem;
+      }
+      .site-nav a:not(.nav-button) {
+        font-size: 0.78rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #1B2A4A;
+        text-decoration-line: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.5em;
+        transition: text-decoration-color 160ms ease;
+      }
+      .site-nav a:not(.nav-button):hover { text-decoration-color: #9A7B3E; }
+      .nav-button {
+        display: inline-block;
+        padding: 0.5rem 0.95rem;
+        font-size: 0.74rem;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: #FAF9F6;
+        background-color: #1B2A4A;
+        border: 1px solid #1B2A4A;
+        transition: background-color 160ms ease, color 160ms ease;
+      }
+      .nav-button:hover { color: #1B2A4A; background-color: #FAF9F6; }
+
+      /* ---------- Section furniture ---------- */
+      .dinkus {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        color: #9A7B3E;
+      }
+      .section-title {
+        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+        font-size: clamp(1.8rem, 3.6vw, 2.4rem);
+        line-height: 1.2;
         text-align: center;
+        color: #1B2A4A;
+        text-wrap: balance;
+      }
+      .section-intro {
+        max-width: 36rem;
+        margin: 0.85rem auto 0;
+        font-style: italic;
+        text-align: center;
+        color: #5A636B;
+        text-wrap: balance;
+      }
+
+      /* Book-style text: justified with hyphenation on wider screens */
+      .prose-old p { hyphens: auto; -webkit-hyphens: auto; }
+      .prose-old p + p { margin-top: 1rem; }
+      .prose-old.is-indented p + p { margin-top: 0; text-indent: 1.75em; }
+      @media (min-width: 640px) {
+        .prose-old p { text-align: justify; }
+      }
+
+      .dropcap::first-letter {
+        float: left;
+        margin: 0.07em 0.1em 0 0;
+        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+        font-size: 3.9em;
+        line-height: 0.8;
+        color: #1B2A4A;
+      }
+
+      /* Links inside running text */
+      .text-link {
+        color: #1B2A4A;
+        text-decoration-line: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: #B3AB9C;
+        text-underline-offset: 0.2em;
+        transition: text-decoration-color 160ms ease;
+      }
+      .text-link:hover { text-decoration-color: #1B2A4A; }
+
+      /* Classic button: solid navy, inverts on hover */
+      .btn {
+        display: inline-block;
+        padding: 0.9rem 1.6rem;
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        text-align: center;
+        text-wrap: balance;
         color: #FAF9F6;
         background-color: #1B2A4A;
         border: 1px solid #1B2A4A;
         cursor: pointer;
-        transition: background-color 180ms ease, box-shadow 180ms ease;
+        transition: background-color 160ms ease, color 160ms ease;
       }
-      .btn:hover {
-        background-color: #121D35;
-        box-shadow: inset 0 0 0 3px #121D35, inset 0 0 0 4px rgb(154 123 62 / 0.85);
-      }
+      .btn:hover { color: #1B2A4A; background-color: #FAF9F6; }
       .btn:disabled { opacity: 0.6; cursor: progress; }
-      .btn-sm { padding: 0.6rem 1.05rem; font-size: 0.875rem; }
-      @media (min-width: 640px) {
-        .btn { font-size: 1rem; padding: 1rem 1.75rem; }
-        .btn-sm { font-size: 0.875rem; padding: 0.6rem 1.05rem; }
-      }
 
-      /* Links */
-      .text-link {
-        font-weight: 600;
-        color: #1B2A4A;
-        text-decoration-line: underline;
-        text-decoration-thickness: 1px;
-        text-decoration-color: #9A7B3E;
-        text-underline-offset: 0.4em;
-        transition: text-decoration-color 180ms ease;
-      }
-      .text-link:hover { text-decoration-color: #1B2A4A; }
-      .text-link .arrow { display: inline-block; margin-left: 0.35rem; text-decoration: none; }
-
-      .quiet-link {
-        color: #1B2A4A;
-        text-decoration-line: underline;
-        text-decoration-thickness: 1px;
-        text-decoration-color: #CFC9BE;
-        text-underline-offset: 0.3em;
-        transition: text-decoration-color 180ms ease;
-      }
-      .quiet-link:hover { text-decoration-color: #1B2A4A; }
-
-      .nav-link {
-        position: relative;
-        padding: 0.25rem 0;
-        font-size: 0.9375rem;
-        color: #2C353D;
-        transition: color 180ms ease;
-      }
-      .nav-link::after {
-        content: "";
+      /* ---------- One Client at a Time frame ---------- */
+      .frame { position: relative; padding: 5px; border: 1px solid #1B2A4A; }
+      .frame-inner { border: 1px solid #1B2A4A; }
+      .frame-star {
         position: absolute;
-        left: 0;
-        right: 0;
-        bottom: -1px;
-        height: 1px;
-        background-color: #9A7B3E;
-        opacity: 0;
-        transition: opacity 180ms ease;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 0.75rem;
+        color: #9A7B3E;
+        background-color: #FAF9F6;
       }
-      .nav-link:hover { color: #1B2A4A; }
-      .nav-link:hover::after { opacity: 1; }
 
-      .footer-heading {
-        font-size: 0.72rem;
-        font-weight: 600;
+      /* ---------- Four pillars: ruled like a printed table ---------- */
+      .pillars { display: grid; }
+      .pillars > article { padding: 1.75rem 0; }
+      .pillars > article + article { border-top: 1px solid #CFC8BB; }
+      @media (min-width: 768px) {
+        .pillars { grid-template-columns: 1fr 1fr; }
+        .pillars > article { padding: 2rem 2.25rem; }
+        .pillars > article + article { border-top: 0; }
+        .pillars > article:nth-child(odd) { padding-left: 0; border-right: 1px solid #CFC8BB; }
+        .pillars > article:nth-child(even) { padding-right: 0; }
+        .pillars > article:nth-child(-n+2) { border-bottom: 1px solid #CFC8BB; }
+      }
+      .pillar-title {
+        font-size: 0.86rem;
+        font-weight: 700;
+        line-height: 1.5;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #1B2A4A;
+      }
+
+      /* ---------- Process: name, dot leader, cost ---------- */
+      .steps > li + li { margin-top: 2.5rem; }
+      .step-head { display: flex; align-items: baseline; }
+      .step-name {
+        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+        font-size: clamp(1.75rem, 3.4vw, 2.1rem);
+        line-height: 1.1;
+        color: #1B2A4A;
+        white-space: nowrap;
+      }
+      .step-name .numeral { margin-right: 0.35em; color: #9A7B3E; }
+      .leader {
+        flex: 1;
+        min-width: 1.5rem;
+        margin: 0 0.75rem;
+        border-bottom: 2px dotted #B3AB9C;
+        transform: translateY(-0.3em);
+      }
+      .step-cost { font-style: italic; color: #5A636B; white-space: nowrap; }
+
+      /* Boxed notice with its title set into the top border */
+      .notice { position: relative; padding: 2.4rem 1.5rem 1.75rem; border: 1px solid #1B2A4A; }
+      @media (min-width: 640px) { .notice { padding: 2.5rem 2.5rem 2rem; } }
+      .notice-title {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 0 0.9rem;
+        white-space: nowrap;
+        font-size: 0.78rem;
+        font-weight: 700;
         letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: rgb(250 249 246 / 0.6);
-      }
-      .footer-link {
-        color: rgb(250 249 246 / 0.85);
-        text-decoration-line: underline;
-        text-decoration-thickness: 1px;
-        text-decoration-color: transparent;
-        text-underline-offset: 0.3em;
-        transition: color 180ms ease, text-decoration-color 180ms ease;
-      }
-      .footer-link:hover { color: #FAF9F6; text-decoration-color: #9A7B3E; }
-
-      /* Term sheet: label / value rows */
-      .terms > div { padding: 1.1rem 0; border-bottom: 1px solid #E5E2DC; }
-      .terms > div:last-child { border-bottom-width: 0; }
-      .terms.is-ruled > div:last-child { border-bottom-width: 1px; }
-      .terms dt {
-        font-size: 0.72rem;
-        font-weight: 600;
-        letter-spacing: 0.16em;
-        text-transform: uppercase;
-        color: #5A636B;
-      }
-      .terms dd {
-        margin-top: 0.35rem;
-        font-family: "Libre Baskerville", Georgia, serif;
-        font-size: 1rem;
-        line-height: 1.55;
         color: #1B2A4A;
-      }
-      .on-dark .terms > div { border-color: rgb(250 249 246 / 0.16); }
-      .on-dark .terms dt { color: rgb(250 249 246 / 0.68); }
-      .on-dark .terms dd { color: #FAF9F6; }
-
-      /* Lists with a short brass rule in place of a bullet */
-      .ledger-list > li { position: relative; padding-left: 1.5rem; }
-      .ledger-list > li + li { margin-top: 0.6rem; }
-      .ledger-list > li::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0.8em;
-        width: 0.75rem;
-        height: 1px;
-        background-color: #9A7B3E;
+        background-color: #FAF9F6;
       }
 
-      /* Small status tags on process steps */
-      .tag {
-        display: inline-block;
-        padding: 0.3rem 0.6rem;
-        font-size: 0.6875rem;
-        line-height: 1.4;
-        font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        white-space: nowrap;
-        color: #1B2A4A;
-        border: 1px solid #9A7B3E;
+      /* ---------- Inquiry form ---------- */
+      .form-row { display: grid; gap: 0.4rem; }
+      .form-row + .form-row { margin-top: 1.25rem; }
+      .form-row > label { line-height: 1.45; color: #1B2A4A; }
+      @media (min-width: 640px) {
+        .form-row { grid-template-columns: 13rem minmax(0, 1fr); gap: 1.25rem; align-items: baseline; }
+        .form-row > label { text-align: right; }
       }
-      .tag.is-solid { color: #FAF9F6; background-color: #1B2A4A; border-color: #1B2A4A; }
-
-      /* Rule with a centered star */
-      .star-rule { display: flex; align-items: center; gap: 1.25rem; color: #9A7B3E; }
-      .star-rule::before,
-      .star-rule::after { content: ""; flex: 1; height: 1px; background-color: rgb(250 249 246 / 0.16); }
-
-      /* Form */
-      .field-label {
-        display: block;
-        font-size: 0.75rem;
-        font-weight: 600;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #1B2A4A;
-      }
-      .field-label .optional {
-        white-space: nowrap;
-        font-size: 0.8125rem;
-        font-weight: 400;
-        letter-spacing: 0.02em;
-        text-transform: none;
-        color: #5A636B;
-      }
-      .field-input {
+      .req { margin-left: 0.15rem; color: #8C2F2F; }
+      .field {
         display: block;
         width: 100%;
-        margin-top: 0.55rem;
-        padding: 0.8rem 0.95rem;
+        padding: 0.6rem 0.75rem;
         font-size: 1.0625rem;
         line-height: 1.5;
         color: #2C353D;
-        background-color: #FDFCFA;
+        background-color: #FFFFFF;
         border: 1px solid #8F8A81;
         border-radius: 0;
-        transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+        box-shadow: inset 0 1px 2px rgb(44 53 61 / 0.1);
       }
-      .field-input:hover { border-color: #5A636B; }
-      .field-input:focus {
-        outline: none;
-        background-color: #FFFFFF;
-        border-color: #1B2A4A;
-        box-shadow: 0 0 0 1px #1B2A4A;
-      }
-      .field-input::placeholder { color: #80868C; }
+      .field:hover { border-color: #5A636B; }
+      .field:focus { outline: 2px solid #1B2A4A; outline-offset: 0; border-color: #1B2A4A; }
+      .field::placeholder { color: #80868C; font-style: italic; }
 
       .form-status:not(:empty) {
-        margin-top: 1.75rem;
+        margin-top: 1.5rem;
         padding: 0.9rem 1.1rem;
-        font-size: 1rem;
         line-height: 1.6;
-        color: #2C353D;
-        background-color: #FAF9F6;
-        border-left: 2px solid #9A7B3E;
+        border: 1px solid #CFC8BB;
+        border-left: 3px solid #9A7B3E;
+        background-color: #FFFFFF;
       }
       .form-status[data-tone="error"] { border-left-color: #8C2F2F; }
+
+      /* ---------- Footer ---------- */
+      .footer-name {
+        font-family: "Libre Caslon Display", "Libre Caslon Text", Georgia, serif;
+        font-size: 1.35rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .footer-link {
+        color: rgb(250 249 246 / 0.88);
+        text-decoration-line: underline;
+        text-decoration-thickness: 1px;
+        text-decoration-color: transparent;
+        text-underline-offset: 0.25em;
+        transition: color 160ms ease, text-decoration-color 160ms ease;
+      }
+      .footer-link:hover { color: #FAF9F6; text-decoration-color: #9A7B3E; }
     }
   </style>
 </head>
 
 <body>
-  <!-- Shared star ornament -->
+  <!-- Star used by the emblem and ornaments -->
   <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
     <symbol id="star" viewBox="0 0 24 24">
       <path fill="currentColor" d="M12 2.95 14.25 9.86 21.51 9.86 15.63 14.13 17.88 21.04 12 16.77 6.12 21.04 8.37 14.13 2.49 9.86 9.75 9.86Z"/>
     </symbol>
+    <!-- Thirteen stars in a ring -->
+    <symbol id="emblem" viewBox="0 0 56 56">
+      <use href="#star" x="24.25" y="2.25" width="7.5" height="7.5"/>
+      <use href="#star" x="34.47" y="4.77" width="7.5" height="7.5"/>
+      <use href="#star" x="42.36" y="11.75" width="7.5" height="7.5"/>
+      <use href="#star" x="46.09" y="21.6" width="7.5" height="7.5"/>
+      <use href="#star" x="44.82" y="32.05" width="7.5" height="7.5"/>
+      <use href="#star" x="38.84" y="40.72" width="7.5" height="7.5"/>
+      <use href="#star" x="29.52" y="45.61" width="7.5" height="7.5"/>
+      <use href="#star" x="18.98" y="45.61" width="7.5" height="7.5"/>
+      <use href="#star" x="9.66" y="40.72" width="7.5" height="7.5"/>
+      <use href="#star" x="3.68" y="32.05" width="7.5" height="7.5"/>
+      <use href="#star" x="2.41" y="21.6" width="7.5" height="7.5"/>
+      <use href="#star" x="6.14" y="11.75" width="7.5" height="7.5"/>
+      <use href="#star" x="14.03" y="4.77" width="7.5" height="7.5"/>
+    </symbol>
   </svg>
 
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:bg-navy focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-ivory">Skip to main content</a>
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:bg-navy focus:px-4 focus:py-2.5 focus:text-sm focus:text-ivory">Skip to main content</a>
 
-  <!-- ===================== Header ===================== -->
-  <header class="sticky top-0 z-50 border-t-4 border-b border-t-navy border-b-rule bg-ivory">
-    <div class="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between gap-6 px-5 sm:px-8">
-      <a href="#top" class="font-serif text-[0.875rem] uppercase tracking-[0.24em] text-navy sm:text-[0.95rem]">[FIRM NAME]</a>
+  <div class="mx-auto max-w-[66rem] bg-ivory sm:my-8 sm:border sm:border-stone-dark">
 
-      <nav aria-label="Primary" class="hidden items-center gap-9 lg:flex">
-        <a href="#philosophy" class="nav-link">Philosophy</a>
-        <a href="#capabilities" class="nav-link">Capabilities</a>
-        <a href="#process" class="nav-link">Process</a>
-        <a href="#inquire" class="nav-link">Inquire</a>
-        <a href="#inquire" class="btn btn-sm ml-1">Request Free Audit</a>
+    <!-- ===================== Masthead ===================== -->
+    <header class="border-t-[6px] border-navy">
+      <div class="px-5 pb-8 pt-10 text-center sm:px-12 sm:pt-12">
+        <svg class="mx-auto block text-brass" width="76" height="76" aria-hidden="true" focusable="false"><use href="#emblem"/></svg>
+        <p class="masthead-name mt-4"><a href="#top">Patriot Consulting</a></p>
+        <p class="masthead-tagline mt-3">Operational Excellence for American Enterprise</p>
+      </div>
+      <div class="rule-thick-thin" aria-hidden="true"></div>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#philosophy">Philosophy</a></li>
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#inquire">Inquire</a></li>
+          <li><a href="#inquire" class="nav-button">Request Free Audit</a></li>
+        </ul>
       </nav>
+    </header>
 
-      <button id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu"
-        class="cursor-pointer border border-rule px-3.5 py-2 text-[0.72rem] font-semibold uppercase tracking-[0.18em] text-navy transition-colors duration-200 hover:border-navy lg:hidden">Menu</button>
-    </div>
+    <main id="main" tabindex="-1" class="focus:outline-none">
 
-    <nav id="mobile-menu" aria-label="Primary (mobile)" class="border-t border-rule lg:hidden" hidden>
-      <div class="mx-auto max-w-6xl px-5 pb-7 pt-1 sm:px-8">
-        <a href="#philosophy" class="block border-b border-rule py-4 font-serif text-[1.05rem] text-navy">Philosophy</a>
-        <a href="#capabilities" class="block border-b border-rule py-4 font-serif text-[1.05rem] text-navy">Capabilities</a>
-        <a href="#process" class="block border-b border-rule py-4 font-serif text-[1.05rem] text-navy">Process</a>
-        <a href="#inquire" class="block border-b border-rule py-4 font-serif text-[1.05rem] text-navy">Inquire</a>
-        <a href="#inquire" class="btn mt-7 w-full">Request Free Audit</a>
+      <!-- ===================== Opening ===================== -->
+      <section class="px-5 pt-14 sm:px-12 sm:pt-16" aria-labelledby="hero-heading">
+        <h1 id="hero-heading" class="mx-auto max-w-[52rem] text-balance text-center text-[2rem] leading-[1.18] text-navy sm:text-[2.5rem] lg:text-[2.75rem]">
+          <span class="block font-display">Dedicated Operational <em class="font-serif">&amp;</em> Growth Consulting<span class="sr-only">,</span></span>
+          <em class="mt-1 block font-serif">One Business at a Time.</em>
+        </h1>
+
+        <div class="prose-old mx-auto mt-9 max-w-[39rem]">
+          <p class="dropcap text-[1.1875rem] leading-[1.7]">We partner exclusively with veteran-owned businesses and family-centered organizations to build strong foundations, clean finances, and steady growth, dedicating 100% of our focus to a single client per engagement.</p>
+        </div>
+
+        <div class="mt-10 text-center">
+          <a href="#inquire" class="btn">Schedule Your Free Operational Audit</a>
+          <p class="mt-5 italic text-muted">The operational audit is always free. <a href="#process" class="text-link whitespace-nowrap">See how we work&nbsp;↓</a></p>
+        </div>
+      </section>
+
+      <div class="dinkus py-14" aria-hidden="true">
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
       </div>
-    </nav>
-  </header>
 
-  <main id="main" tabindex="-1" class="focus:outline-none">
-
-    <!-- ===================== Hero ===================== -->
-    <section aria-labelledby="hero-heading">
-      <div class="mx-auto max-w-6xl px-5 pb-20 pt-14 sm:px-8 sm:pb-24 sm:pt-20 lg:pb-28 lg:pt-24">
-        <div class="grid items-start gap-14 lg:grid-cols-[minmax(0,1fr)_21rem] lg:gap-16 xl:gap-24">
-          <div>
-            <p class="eyebrow">Operational Excellence for American Enterprise</p>
-            <h1 id="hero-heading" class="mt-7 text-balance font-serif text-[1.875rem] leading-[1.2] tracking-[-0.01em] text-navy sm:text-[2.75rem] sm:leading-[1.15] lg:text-[length:clamp(2.5rem,3.6vw,3.25rem)] lg:leading-[1.13]">
-              Dedicated Operational &amp; Growth Consulting—<br class="hidden sm:inline"><em>One Business at a Time.</em>
-            </h1>
-            <p class="mt-7 max-w-[35rem] text-pretty text-lg leading-[1.7] sm:text-[1.1875rem]">
-              We partner exclusively with veteran-owned businesses and family-centered organizations to build strong foundations, clean finances, and steady growth—dedicating 100% of our focus to a single client per engagement.
-            </p>
-            <div class="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-9">
-              <a href="#inquire" class="btn">Schedule Your Free Operational Audit</a>
-              <a href="#process" class="text-link">See How We Work<span class="arrow" aria-hidden="true">↓</span></a>
+      <!-- ===================== One Client at a Time ===================== -->
+      <section id="philosophy" class="px-5 sm:px-12" aria-labelledby="philosophy-heading">
+        <div class="frame mx-auto max-w-[46rem]">
+          <span class="frame-star" aria-hidden="true"><svg width="16" height="16" class="block"><use href="#star"/></svg></span>
+          <div class="frame-inner px-6 pb-10 pt-11 sm:px-12 sm:pb-12 sm:pt-12">
+            <h2 id="philosophy-heading" class="section-title">One Client at a Time</h2>
+            <p class="section-intro">Our commitment to every business we serve</p>
+            <div class="prose-old is-indented mt-8">
+              <p>Most agencies and consulting firms grow by adding accounts. Each new client gets a smaller share of the team’s time, and the work tends to go to whoever happens to be free that week.</p>
+              <p>Patriot Consulting works another way. We take on one client at a time, and while we are working with you, yours is the only business we are building. Every hour we spend goes to your project.</p>
+              <p>That arrangement keeps us accountable. You always know who is doing the work, and you never wait behind another client. Each system we put in place is tested and written down before we hand it over, so your team can keep it running long after the engagement ends.</p>
             </div>
           </div>
-
-          <aside aria-label="At a glance" class="border border-t-[3px] border-rule border-t-navy bg-white px-7 pb-2 pt-7 lg:mt-1">
-            <p class="eyebrow">At a Glance</p>
-            <dl class="terms mt-3">
-              <div>
-                <dt>Who we serve</dt>
-                <dd>Veteran-owned small businesses, family counselors, local ministries, and community organizations</dd>
-              </div>
-              <div>
-                <dt>Active clients</dt>
-                <dd>One at a time</dd>
-              </div>
-              <div>
-                <dt>Operational audit</dt>
-                <dd>Free, permanently</dd>
-              </div>
-              <div>
-                <dt>You pay for</dt>
-                <dd>Implementation work, and only once you choose it</dd>
-              </div>
-            </dl>
-          </aside>
         </div>
+      </section>
+
+      <div class="dinkus py-14" aria-hidden="true">
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
       </div>
-    </section>
 
-    <!-- ===================== Philosophy: One Client at a Time ===================== -->
-    <section id="philosophy" aria-labelledby="philosophy-heading" class="border-t border-rule">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
-        <div class="relative border border-navy/70 p-1.5 sm:p-2">
-          <span class="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2 bg-ivory px-3 text-brass" aria-hidden="true">
-            <svg width="16" height="16" class="block"><use href="#star"/></svg>
-          </span>
+      <!-- ===================== Capabilities ===================== -->
+      <section id="capabilities" class="px-5 sm:px-12" aria-labelledby="capabilities-heading">
+        <h2 id="capabilities-heading" class="section-title">The Four Pillars of Implementation</h2>
+        <p class="section-intro">When you hire us to carry out the work, it falls into four areas.</p>
 
-          <div class="border border-rule bg-white px-6 py-14 sm:px-12 sm:py-16 lg:px-14 lg:py-20">
-            <div class="mx-auto max-w-[44rem] text-center">
-              <p class="eyebrow is-centered">Our Philosophy</p>
-              <h2 id="philosophy-heading" class="mt-6 text-balance font-serif text-[1.8rem] leading-[1.25] text-navy sm:text-[2.35rem]">We Work With One Client at a Time.</h2>
-              <div class="mt-8 space-y-5 text-pretty text-left text-[1.0625rem] leading-[1.75] sm:text-center sm:text-lg">
-                <p>Most agencies grow by adding accounts. One team ends up juggling dozens of clients, the work goes to whoever has time that week, and your business becomes a line item on a crowded calendar.</p>
-                <p>We chose a different way to work. We take on a single engagement at a time, and while we’re working with you, yours is the only business we’re building—with all of our attention and none of the overhead of a large agency.</p>
-              </div>
+        <div class="pillars mx-auto mt-10 max-w-[54rem]">
+          <article>
+            <h3 class="pillar-title">I. Foundation &amp; Administration</h3>
+            <p class="mt-3">We handle the administrative steps of forming your LLC and obtaining an EIN, prepare a compliance checklist suited to your organization, and put your business accounts in order.</p>
+          </article>
+          <article>
+            <h3 class="pillar-title">II. Financial Workflows</h3>
+            <p class="mt-3">We set up your bookkeeping, separate your personal and business finances, and put simple cash-flow tracking in place so you can see where the money goes each month.</p>
+          </article>
+          <article>
+            <h3 class="pillar-title">III. Operations &amp; Systems</h3>
+            <p class="mt-3">We set up a CRM, automate how new clients are brought on, organize your scheduling, and write standard operating procedures so the daily work is done the same way every time.</p>
+          </article>
+          <article>
+            <h3 class="pillar-title">IV. Growth &amp; Acquisition</h3>
+            <p class="mt-3">We give you a clean web presence, make you easier to find locally, and run targeted digital advertising designed to bring steady clients through the door.</p>
+          </article>
+        </div>
+      </section>
+
+      <div class="dinkus py-14" aria-hidden="true">
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
+      </div>
+
+      <!-- ===================== Process ===================== -->
+      <section id="process" class="px-5 sm:px-12" aria-labelledby="process-heading">
+        <h2 id="process-heading" class="section-title">How We Work</h2>
+        <p class="section-intro">Three steps. The first two cost you nothing.</p>
+
+        <ol class="steps mx-auto mt-10 max-w-[42rem]">
+          <li>
+            <div class="step-head">
+              <h3 class="step-name"><span class="numeral">I.</span>Intro</h3>
+              <span class="leader" aria-hidden="true"></span>
+              <span class="step-cost">No charge</span>
             </div>
-
-            <ul class="mt-14 grid border-t border-rule text-center md:grid-cols-3">
-              <li class="px-2 pb-2 pt-10 md:px-8 md:pb-0">
-                <h3 class="font-serif text-[1.15rem] text-navy">Undivided Attention</h3>
-                <p class="mx-auto mt-3 max-w-[22rem] text-pretty leading-[1.7]">Your project is the only one on our desk. We’re never weighing your deadlines against another client’s.</p>
-              </li>
-              <li class="mt-10 border-t border-rule px-2 pb-2 pt-10 md:mt-0 md:border-l md:border-t-0 md:px-8 md:pb-0">
-                <h3 class="font-serif text-[1.15rem] text-navy">Direct Accountability</h3>
-                <p class="mx-auto mt-3 max-w-[22rem] text-pretty leading-[1.7]">The people who review your business are the people who build its systems. No handoffs, no layers of account managers, no question about who is responsible.</p>
-              </li>
-              <li class="mt-10 border-t border-rule px-2 pt-10 md:mt-0 md:border-l md:border-t-0 md:px-8">
-                <h3 class="font-serif text-[1.15rem] text-navy">Careful Craftsmanship</h3>
-                <p class="mx-auto mt-3 max-w-[22rem] text-pretty leading-[1.7]">Every system is built, tested, and documented before we hand it over, so it holds up, and your team can run it, long after the engagement ends.</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Capabilities: Four Pillars ===================== -->
-    <section id="capabilities" aria-labelledby="capabilities-heading" class="border-t border-rule">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
-        <div class="grid gap-6 lg:grid-cols-12 lg:gap-12">
-          <div class="lg:col-span-6">
-            <p class="eyebrow">Capabilities</p>
-            <h2 id="capabilities-heading" class="mt-6 text-balance font-serif text-[1.8rem] leading-[1.25] text-navy sm:text-[2.35rem]">The Four Pillars of Implementation</h2>
-          </div>
-          <p class="max-w-[34rem] text-pretty text-[1.0625rem] leading-[1.75] lg:col-span-6 lg:pt-[2.6rem]">Most organizations don’t need everything fixed at once. They need the right things set up properly, in the right order, by someone who will see them through. Our implementation work falls into four areas.</p>
-        </div>
-
-        <div class="mt-14 grid gap-px border border-rule bg-rule md:grid-cols-2">
-          <article class="bg-ivory p-7 sm:p-10 lg:p-12">
-            <p class="font-serif text-[1.6rem] leading-none text-brass" aria-hidden="true">I.</p>
-            <h3 class="mt-6 font-serif text-[1.25rem] leading-snug text-navy">Foundation &amp; Administration</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">The paperwork and structure underneath a sound business, set up correctly the first time.</p>
-            <ul class="ledger-list mt-6 border-t border-rule pt-6">
-              <li>Administrative LLC formation and EIN setup</li>
-              <li>Compliance checklists suited to your organization</li>
-              <li>Business account organization</li>
-            </ul>
-          </article>
-
-          <article class="bg-ivory p-7 sm:p-10 lg:p-12">
-            <p class="font-serif text-[1.6rem] leading-none text-brass" aria-hidden="true">II.</p>
-            <h3 class="mt-6 font-serif text-[1.25rem] leading-snug text-navy">Financial Workflows</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">Books you can rely on, and a clear view of where the money goes each month.</p>
-            <ul class="ledger-list mt-6 border-t border-rule pt-6">
-              <li>Bookkeeping system configuration</li>
-              <li>Separating personal and business finances</li>
-              <li>Clear, simple cash-flow tracking</li>
-            </ul>
-          </article>
-
-          <article class="bg-ivory p-7 sm:p-10 lg:p-12">
-            <p class="font-serif text-[1.6rem] leading-none text-brass" aria-hidden="true">III.</p>
-            <h3 class="mt-6 font-serif text-[1.25rem] leading-snug text-navy">Operations &amp; Systems</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">The everyday work of intake, scheduling, and follow-up, handled the same way every time.</p>
-            <ul class="ledger-list mt-6 border-t border-rule pt-6">
-              <li>CRM setup</li>
-              <li>Automated client onboarding</li>
-              <li>Scheduling workflows</li>
-              <li>Clear, written standard operating procedures</li>
-            </ul>
-          </article>
-
-          <article class="bg-ivory p-7 sm:p-10 lg:p-12">
-            <p class="font-serif text-[1.6rem] leading-none text-brass" aria-hidden="true">IV.</p>
-            <h3 class="mt-6 font-serif text-[1.25rem] leading-snug text-navy">Growth &amp; Acquisition</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">Steady, dependable ways to bring the right clients through the door.</p>
-            <ul class="ledger-list mt-6 border-t border-rule pt-6">
-              <li>A clean, credible web presence</li>
-              <li>Local visibility in search and maps</li>
-              <li>Targeted digital advertising campaigns</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== Process: Three Steps ===================== -->
-    <section id="process" aria-labelledby="process-heading" class="border-t border-rule">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
-        <div class="grid gap-6 lg:grid-cols-12 lg:gap-12">
-          <div class="lg:col-span-6">
-            <p class="eyebrow">The Process</p>
-            <h2 id="process-heading" class="mt-6 font-serif text-[1.8rem] leading-[1.25] text-navy sm:text-[2.35rem]">How We Work</h2>
-          </div>
-          <p class="max-w-[34rem] text-pretty text-[1.0625rem] leading-[1.75] lg:col-span-6 lg:pt-[2.6rem]">There’s no drawn-out sales process. The first two steps cost you nothing, and the third happens only if you decide it’s worth doing.</p>
-        </div>
-
-        <ol class="mt-14 grid gap-14 md:grid-cols-3 md:gap-10 lg:gap-14">
-          <li class="border-t border-navy pt-7">
-            <div class="flex items-center justify-between gap-4">
-              <span class="font-serif text-[2.25rem] leading-none text-brass" aria-hidden="true">01</span>
-              <span class="tag">Free</span>
-            </div>
-            <h3 class="mt-7 text-balance font-serif text-[1.2rem] leading-snug text-navy">15-Minute Intake Call</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">A straightforward conversation to understand your mission, goals, and current bottlenecks.</p>
-            <p class="mt-3 text-pretty leading-[1.7] text-muted">Nothing to prepare. We’ll ask about your work, the people you serve, and where things feel stuck.</p>
+            <p class="mt-3">A fifteen-minute phone call. We learn about your mission, your goals, and where things are getting stuck. There is nothing to prepare.</p>
           </li>
-
-          <li class="border-t border-navy pt-7">
-            <div class="flex items-center justify-between gap-4">
-              <span class="font-serif text-[2.25rem] leading-none text-brass" aria-hidden="true">02</span>
-              <span class="tag">Permanently Free</span>
+          <li>
+            <div class="step-head">
+              <h3 class="step-name"><span class="numeral">II.</span>Audit</h3>
+              <span class="leader" aria-hidden="true"></span>
+              <span class="step-cost">No charge, always</span>
             </div>
-            <h3 class="mt-7 text-balance font-serif text-[1.2rem] leading-snug text-navy">AI-Accelerated Operational Audit</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">We use modern AI diagnostic workflows to review your systems 10x faster than traditional consultants—delivering a clear, prioritized roadmap at zero cost.</p>
-            <p class="mt-3 text-pretty leading-[1.7] text-muted">The roadmap is yours to keep, whether or not you hire us. <a href="#free-audit" class="quiet-link whitespace-nowrap">Why it’s free</a></p>
+            <p class="mt-3">A review of how your business runs today, from your books and accounts to your scheduling, systems, and marketing. We use modern AI tools to complete it about ten times faster than a traditional firm, and you receive a written roadmap that sets out what to fix and in what order. The roadmap is yours to keep whether or not you hire us.</p>
           </li>
-
-          <li class="border-t border-navy pt-7">
-            <div class="flex items-center justify-between gap-4">
-              <span class="font-serif text-[2.25rem] leading-none text-brass" aria-hidden="true">03</span>
-              <span class="tag is-solid">Paid Execution</span>
+          <li>
+            <div class="step-head">
+              <h3 class="step-name"><span class="numeral">III.</span>Implement</h3>
+              <span class="leader" aria-hidden="true"></span>
+              <span class="step-cost">Paid engagement</span>
             </div>
-            <h3 class="mt-7 text-balance font-serif text-[1.2rem] leading-snug text-navy">Dedicated Implementation Sprint</h3>
-            <p class="mt-3 text-pretty leading-[1.7]">If you choose to move forward, you become our sole active client while we build and install the agreed-upon systems.</p>
-            <p class="mt-3 text-pretty leading-[1.7] text-muted">Scope and price are agreed in writing before any work begins.</p>
+            <p class="mt-3">If you would like us to carry out the roadmap, you become our only active client while we build and install the systems we agreed on. Scope and price are set in writing before any work begins.</p>
           </li>
         </ol>
+
+        <aside class="notice mx-auto mt-14 max-w-[42rem]" aria-labelledby="free-audit-heading">
+          <h3 id="free-audit-heading" class="notice-title">Why the Audit Is Free</h3>
+          <div class="prose-old">
+            <p>Most firms charge for this kind of review because it takes them weeks. With AI tools handling much of the sorting and analysis, it takes us a fraction of that time. Since it costs us so little, we don’t think it right to charge anyone for it, least of all the veteran-owned businesses and community organizations we serve. The audit is free and will stay free. You pay only if you hire us for the implementation work.</p>
+          </div>
+        </aside>
+      </section>
+
+      <div class="dinkus py-14" aria-hidden="true">
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
+        <svg width="12" height="12"><use href="#star"/></svg>
       </div>
-    </section>
 
-    <!-- ===================== Why the Audit Is Free ===================== -->
-    <section id="free-audit" aria-labelledby="free-audit-heading" class="on-dark bg-navy text-ivory">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
-        <div class="grid gap-12 lg:grid-cols-12 lg:gap-12">
-          <div class="lg:col-span-7">
-            <p class="eyebrow">A Plain Explanation</p>
-            <h2 id="free-audit-heading" class="mt-6 text-balance font-serif text-[1.8rem] leading-[1.25] sm:text-[2.35rem]">Why the Audit Is Permanently Free</h2>
-            <div class="mt-8 space-y-5 text-pretty text-[1.0625rem] leading-[1.75] text-ivory/85">
-              <p>Most consulting firms charge for discovery. You pay for weeks of interviews and document review before anyone tells you what needs fixing.</p>
-              <p>We’ve built modern AI tools into our diagnostic work. They help us organize your records, map how work actually moves through your organization, and find where it slows down, so a thorough review takes us roughly a tenth of the time it takes a traditional firm. The tools speed up the review; the judgment and the recommendations are ours.</p>
-              <p>Since the audit costs us so little time, it wouldn’t be right to bill you as though it didn’t. We would rather pass that saving on to the veteran-owned businesses and community organizations we serve. The audit is free, it will stay free, and you pay only when you hire us for implementation work.</p>
-            </div>
-          </div>
+      <!-- ===================== Inquire ===================== -->
+      <section id="inquire" class="px-5 pb-16 sm:px-12 sm:pb-20" aria-labelledby="inquire-heading">
+        <h2 id="inquire-heading" class="section-title">Request a Free Operational Audit</h2>
+        <p class="section-intro">Complete the form below and we will reply personally to arrange your fifteen-minute intro call.</p>
 
-          <div class="lg:col-span-4 lg:col-start-9 lg:pt-[2.6rem]">
-            <dl class="terms is-ruled border-t border-ivory/20">
-              <div>
-                <dt>Cost of the audit</dt>
-                <dd>$0, permanently</dd>
-              </div>
-              <div>
-                <dt>Obligation to hire us</dt>
-                <dd>None</dd>
-              </div>
-              <div>
-                <dt>What you keep</dt>
-                <dd>A written, prioritized roadmap</dd>
-              </div>
-              <div>
-                <dt>When you pay</dt>
-                <dd>Only for implementation work you approve</dd>
-              </div>
-            </dl>
-          </div>
+        <div class="mx-auto mt-10 max-w-[42rem] border border-stone-dark bg-white px-5 py-4 sm:px-6">
+          <p class="text-[0.98rem] leading-[1.65]"><strong class="text-navy">Please note:</strong> We take on one client at a time, so only one active client slot is open at any given time. If it is filled when you write, we will tell you when the next opening is expected. The intro call and the audit are free either way.</p>
         </div>
-      </div>
-    </section>
 
-    <!-- ===================== Inquire ===================== -->
-    <section id="inquire" aria-labelledby="inquire-heading">
-      <div class="mx-auto max-w-6xl px-5 py-20 sm:px-8 sm:py-24 lg:py-28">
-        <div class="grid gap-12 lg:grid-cols-12 lg:gap-16">
-          <div class="lg:col-span-5">
-            <p class="eyebrow">Inquire</p>
-            <h2 id="inquire-heading" class="mt-6 text-balance font-serif text-[1.8rem] leading-[1.25] text-navy sm:text-[2.35rem]">Request Your Free Operational Audit</h2>
-            <p class="mt-6 text-pretty text-[1.0625rem] leading-[1.75]">Tell us a little about your organization and what you’re working toward. We’ll reply personally to arrange a <span class="whitespace-nowrap">15-minute</span> intake call.</p>
-
-            <div class="mt-10 border-l-2 border-brass py-1 pl-6">
-              <p class="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-navy">A Note on Availability</p>
-              <p class="mt-3 text-pretty leading-[1.7]">We keep only one active client slot open at a time. If it’s filled when you write, we’ll tell you plainly when the next opening is expected. The intake call and the audit are free either way.</p>
-            </div>
-
-            <div class="mt-10">
-              <p class="text-[0.75rem] font-semibold uppercase tracking-[0.16em] text-navy">Prefer to Write or Call?</p>
-              <ul class="mt-3 space-y-1.5">
-                <li><a href="mailto:[EMAIL ADDRESS]" class="quiet-link">[EMAIL ADDRESS]</a></li>
-                <li><a href="tel:[PHONE NUMBER]" class="quiet-link">[PHONE NUMBER]</a></li>
-              </ul>
-            </div>
+        <!-- Without JavaScript the form falls back to the visitor's email app.
+             With JavaScript, see FORM_ENDPOINT in the script at the bottom of this file. -->
+        <form id="inquiry-form" action="mailto:[EMAIL ADDRESS]" method="post" enctype="text/plain" data-email="[EMAIL ADDRESS]"
+          class="mx-auto mt-10 max-w-[42rem]">
+          <div class="form-row">
+            <label for="f-name">Name:<span class="req" aria-hidden="true">*</span></label>
+            <input id="f-name" name="name" type="text" autocomplete="name" required class="field">
+          </div>
+          <div class="form-row">
+            <label for="f-org">Organization or Business Name:<span class="req" aria-hidden="true">*</span></label>
+            <input id="f-org" name="organization" type="text" autocomplete="organization" required class="field">
+          </div>
+          <div class="form-row">
+            <label for="f-email">Email Address:<span class="req" aria-hidden="true">*</span></label>
+            <input id="f-email" name="email" type="email" autocomplete="email" required class="field">
+          </div>
+          <div class="form-row">
+            <label for="f-phone">Telephone:</label>
+            <input id="f-phone" name="phone" type="tel" autocomplete="tel" class="field">
+          </div>
+          <div class="form-row">
+            <label for="f-note">Brief Note on What You’re Building:</label>
+            <textarea id="f-note" name="note" rows="5" class="field resize-y" placeholder="For example: we are a small counseling practice, and our scheduling and billing are still done by hand."></textarea>
           </div>
 
-          <div class="lg:col-span-7">
-            <!-- Without JavaScript the form falls back to the visitor's email app.
-                 With JavaScript, see FORM_ENDPOINT in the script at the bottom of this file. -->
-            <form id="inquiry-form" action="mailto:[EMAIL ADDRESS]" method="post" enctype="text/plain" data-email="[EMAIL ADDRESS]"
-              class="border border-t-[3px] border-rule border-t-navy bg-white p-6 sm:p-10">
-              <div class="grid gap-x-6 gap-y-6 sm:grid-cols-2">
-                <div>
-                  <label for="f-name" class="field-label">Name</label>
-                  <input id="f-name" name="name" type="text" autocomplete="name" required class="field-input">
-                </div>
-                <div>
-                  <label for="f-org" class="field-label">Organization / Business Name</label>
-                  <input id="f-org" name="organization" type="text" autocomplete="organization" required class="field-input">
-                </div>
-                <div>
-                  <label for="f-email" class="field-label">Email</label>
-                  <input id="f-email" name="email" type="email" autocomplete="email" required class="field-input">
-                </div>
-                <div>
-                  <label for="f-phone" class="field-label">Phone <span class="optional">(optional)</span></label>
-                  <input id="f-phone" name="phone" type="tel" autocomplete="tel" class="field-input">
-                </div>
-                <div class="sm:col-span-2">
-                  <label for="f-note" class="field-label">Brief Note on What You’re Building <span class="optional">(optional)</span></label>
-                  <textarea id="f-note" name="note" rows="5" class="field-input resize-y" placeholder="For example: We’re a small counseling practice. Scheduling and billing are still done by hand, and we’d like to serve more families without adding staff."></textarea>
-                </div>
-              </div>
+          <!-- Spam trap: real visitors never see or fill this field -->
+          <div class="hidden" aria-hidden="true">
+            <label for="f-website">Leave this field empty</label>
+            <input id="f-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="_subject" value="New audit inquiry from the Patriot Consulting website">
 
-              <!-- Spam trap: real visitors never see or fill this field -->
-              <div class="hidden" aria-hidden="true">
-                <label for="f-website">Leave this field empty</label>
-                <input id="f-website" type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-              </div>
-              <input type="hidden" name="_subject" value="New audit inquiry from the [FIRM NAME] website">
-
-              <div class="mt-8 flex flex-col-reverse gap-5 border-t border-rule pt-8 sm:flex-row sm:items-center sm:justify-between">
-                <p class="text-[0.9375rem] leading-relaxed text-muted sm:max-w-[16rem]">Your information is used only to respond to your inquiry.</p>
-                <button type="submit" class="btn">Request My Free Audit</button>
-              </div>
+          <div class="form-row mt-7">
+            <span aria-hidden="true"></span>
+            <div>
+              <button type="submit" class="btn">Send Inquiry</button>
+              <p class="mt-3 text-[0.9rem] italic text-muted"><span class="req" aria-hidden="true">*</span> Required. Your information is used only to respond to your inquiry.</p>
               <p id="form-status" class="form-status" role="status" aria-live="polite"></p>
-            </form>
+            </div>
           </div>
-        </div>
+        </form>
+
+        <p class="mx-auto mt-12 max-w-[42rem] text-center">You may also write to us at <a href="mailto:[EMAIL ADDRESS]" class="text-link">[EMAIL ADDRESS]</a> or call <a href="tel:[PHONE NUMBER]" class="text-link whitespace-nowrap">[PHONE NUMBER]</a>.</p>
+      </section>
+    </main>
+
+    <!-- ===================== Footer ===================== -->
+    <footer class="on-dark bg-navy px-5 pb-9 pt-11 text-center text-ivory sm:px-12">
+      <svg class="mx-auto block text-brass" width="54" height="54" aria-hidden="true" focusable="false"><use href="#emblem"/></svg>
+      <p class="footer-name mt-4">Patriot Consulting</p>
+      <p class="mt-1 italic text-ivory/80">One client at a time.</p>
+
+      <p class="mt-6 text-[0.95rem] text-ivory/85">
+        [CITY, STATE]
+        <span class="mx-2 text-brass" aria-hidden="true">·</span>
+        <a href="tel:[PHONE NUMBER]" class="footer-link whitespace-nowrap">[PHONE NUMBER]</a>
+        <span class="mx-2 text-brass" aria-hidden="true">·</span>
+        <a href="mailto:[EMAIL ADDRESS]" class="footer-link">[EMAIL ADDRESS]</a>
+      </p>
+
+      <nav aria-label="Footer" class="mt-4 text-[0.95rem]">
+        <a href="#philosophy" class="footer-link">Philosophy</a>
+        <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
+        <a href="#capabilities" class="footer-link">Capabilities</a>
+        <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
+        <a href="#process" class="footer-link">Process</a>
+        <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
+        <a href="#inquire" class="footer-link">Inquire</a>
+        <span class="mx-2 text-ivory/40" aria-hidden="true">|</span>
+        <a href="#top" class="footer-link whitespace-nowrap">Back to Top&nbsp;↑</a>
+      </nav>
+
+      <div class="mx-auto mt-8 max-w-[44rem] border-t border-ivory/20 pt-6 text-[0.82rem] leading-[1.65] text-ivory/70">
+        <p>&copy; <span id="year">2026</span> Patriot Consulting. All rights reserved.</p>
+        <p class="mt-2 italic">Patriot Consulting provides administrative and operational consulting. We do not provide legal, tax, or accounting advice, and we are glad to work alongside your attorney or CPA.</p>
       </div>
-    </section>
-  </main>
-
-  <!-- ===================== Footer ===================== -->
-  <footer class="on-dark bg-navy text-ivory">
-    <div class="mx-auto max-w-6xl px-5 pb-10 pt-14 sm:px-8 sm:pt-16">
-      <div class="star-rule" aria-hidden="true">
-        <svg width="14" height="14" class="block"><use href="#star"/></svg>
-      </div>
-
-      <div class="mt-12 grid gap-12 md:grid-cols-12">
-        <div class="md:col-span-6">
-          <p class="font-serif text-[0.95rem] uppercase tracking-[0.24em]">[FIRM NAME]</p>
-          <p class="mt-5 max-w-sm text-pretty leading-[1.7] text-ivory/75">Operations and growth consulting for veteran-owned small businesses and the organizations that strengthen families and communities.</p>
-          <p class="mt-6 font-serif italic text-ivory/90">One client at a time.</p>
-        </div>
-
-        <nav aria-label="Footer" class="md:col-span-3">
-          <p class="footer-heading">Navigate</p>
-          <ul class="mt-4 space-y-2.5">
-            <li><a href="#philosophy" class="footer-link">Philosophy</a></li>
-            <li><a href="#capabilities" class="footer-link">Capabilities</a></li>
-            <li><a href="#process" class="footer-link">Process</a></li>
-            <li><a href="#inquire" class="footer-link">Inquire</a></li>
-          </ul>
-        </nav>
-
-        <div class="md:col-span-3">
-          <p class="footer-heading">Contact</p>
-          <ul class="mt-4 space-y-2.5">
-            <li><a href="mailto:[EMAIL ADDRESS]" class="footer-link">[EMAIL ADDRESS]</a></li>
-            <li><a href="tel:[PHONE NUMBER]" class="footer-link">[PHONE NUMBER]</a></li>
-            <li class="text-ivory/75">[CITY, STATE]</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-14 flex flex-col gap-4 border-t border-ivory/15 pt-8 text-[0.8125rem] leading-relaxed text-ivory/60 md:flex-row md:justify-between md:gap-12">
-        <p class="shrink-0">&copy; <span id="year">2026</span> [FIRM NAME]. All rights reserved.</p>
-        <p class="max-w-xl md:text-right">[FIRM NAME] provides administrative and operational consulting. We do not provide legal, tax, or accounting advice, and we’re glad to work alongside your attorney or CPA.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 
   <script>
     (function () {
@@ -659,27 +599,6 @@
             file, the form opens the visitor's email app, ready to send.
          ------------------------------------------------------------------ */
       var FORM_ENDPOINT = ''; // e.g. 'https://formspree.io/f/abcdwxyz'
-
-      /* Mobile menu */
-      var toggle = document.getElementById('menu-toggle');
-      var menu = document.getElementById('mobile-menu');
-
-      function setMenu(open) {
-        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-        toggle.textContent = open ? 'Close' : 'Menu';
-        menu.hidden = !open;
-      }
-
-      toggle.addEventListener('click', function () { setMenu(menu.hidden); });
-      menu.addEventListener('click', function (e) {
-        if (e.target.closest('a')) setMenu(false);
-      });
-      document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape' && !menu.hidden) { setMenu(false); toggle.focus(); }
-      });
-      window.matchMedia('(min-width: 1024px)').addEventListener('change', function (e) {
-        if (e.matches) setMenu(false);
-      });
 
       /* Footer year */
       document.getElementById('year').textContent = String(new Date().getFullYear());
@@ -711,17 +630,17 @@
             .then(function (res) {
               if (!res.ok) throw new Error('Request failed');
               form.reset();
-              showStatus('Thank you' + (firstName ? ', ' + firstName : '') + '. Your inquiry has been received, and we’ll be in touch personally to arrange your intake call.', 'success');
+              showStatus('Thank you' + (firstName ? ', ' + firstName : '') + '. Your inquiry has been received, and we will be in touch personally to arrange your intro call.', 'success');
             })
             .catch(function () {
-              showStatus('Your inquiry couldn’t be sent just now. Please try again in a moment, or write to us at ' + email + '.', 'error');
+              showStatus('Your inquiry could not be sent just now. Please try again in a moment, or write to us at ' + email + '.', 'error');
             })
             .finally(function () { submitBtn.disabled = false; });
           return;
         }
 
         if (!email || email.indexOf('[') !== -1) {
-          showStatus('Online inquiries aren’t connected yet. Please check back soon.', 'error');
+          showStatus('Online inquiries are not connected yet. Please check back soon.', 'error');
           return;
         }
 
@@ -729,7 +648,7 @@
           'Name: ' + name,
           'Organization: ' + organization,
           'Email: ' + String(data.get('email') || ''),
-          'Phone: ' + String(data.get('phone') || ''),
+          'Telephone: ' + String(data.get('phone') || ''),
           '',
           String(data.get('note') || '')
         ].join('\n');
@@ -737,7 +656,7 @@
         window.location.href = 'mailto:' + email +
           '?subject=' + encodeURIComponent('Free Operational Audit Request: ' + (organization || name)) +
           '&body=' + encodeURIComponent(body);
-        showStatus('Your email app should open with your inquiry filled in. Just press send. If nothing opens, write to us at ' + email + '.', 'info');
+        showStatus('Your email program should open with your inquiry filled in. Please press send. If nothing opens, write to us at ' + email + '.', 'info');
       });
     })();
   </script>
